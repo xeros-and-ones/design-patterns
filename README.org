@@ -4,11 +4,11 @@
 
 * Design Patterns :TOC:
 - [[#what-are-design-patterns][What are Design Patterns]]
-  - [[#why-are-they-useful][Why Are They Useful?]]
-  - [[#types-of-design-patterns][Types Of Design Patterns]]
-  - [[#example-observer-pattern-behavioral][Example: Observer Pattern (Behavioral)]]
-  - [[#when-not-to-use-patterns][When Not to Use Patterns]]
-  - [[#key-takeaways][Key Takeaways]]
+- [[#why-are-they-useful][Why Are They Useful?]]
+- [[#types-of-design-patterns][Types Of Design Patterns]]
+- [[#example-observer-pattern-behavioral][Example: Observer Pattern (Behavioral)]]
+- [[#when-not-to-use-patterns][When Not to Use Patterns]]
+- [[#key-takeaways][Key Takeaways]]
 
 * What are Design Patterns
 What are Design Patterns:
@@ -22,7 +22,7 @@ Design patterns are reusable, proven solutions to common software design problem
 
 Think of them as blueprints for solving recurring challenges in software design, similar to how architects use standardized techniques for building houses.
 
-** Why Are They Useful?
+* Why Are They Useful?
 1. Avoid Reinventing the Wheel
     Patterns capture best practices refined over decades.
 
@@ -52,7 +52,7 @@ Think of them as blueprints for solving recurring challenges in software design,
     Example: Observer pattern simplifies event handling without spaghetti code.
 
 
-** Types Of Design Patterns
+* Types Of Design Patterns
 *** Creational (Object creation)
     Singleton, Factory, Builder
 
@@ -63,7 +63,7 @@ Think of them as blueprints for solving recurring challenges in software design,
     Observer, Strategy, Command
 
 
-** Example: Observer Pattern (Behavioral)
+* Example: Observer Pattern (Behavioral)
 Problem: You need to notify multiple objects when data changes (e.g., stock prices).
 
 Without a Pattern:
@@ -100,11 +100,11 @@ Benefits:
 + Reusable across projects.
 
 
-** When Not to Use Patterns
+* When Not to Use Patterns
 + Over-engineering: Don’t force a pattern if the problem is simple.
 + Premature optimization: Start with clean code, then refactor if needed.
 
-** Key Takeaways
+* Key Takeaways
 + Design patterns = Time-tested solutions.
 + They standardize communication among developers.
 + Use them to write cleaner, more adaptable code.
