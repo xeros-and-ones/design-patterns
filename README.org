@@ -1,0 +1,113 @@
+#+title:     Design Patters
+#+author:    Mohamed Tarek
+#+email:     m96tarek@gmail.com
+
+* Design Patterns :TOC:
+- [[#design-patterns][Design Patterns]]
+  - [[#why-are-they-useful][Why Are They Useful?]]
+  - [[#types-of-design-patterns][Types Of Design Patterns]]
+  - [[#example-observer-pattern-behavioral][Example: Observer Pattern (Behavioral)]]
+  - [[#when-not-to-use-patterns][When Not to Use Patterns]]
+  - [[#key-takeaways][Key Takeaways]]
+
+* Design Patterns
+What are Design Patterns:
+Design patterns are reusable, proven solutions to common software design problems. They provide templates for structuring code to make it:
+
++ More maintainable
+
++ Easier to understand
+
++ Flexible to change
+
+Think of them as blueprints for solving recurring challenges in software design, similar to how architects use standardized techniques for building houses.
+
+** Why Are They Useful?
+1. Avoid Reinventing the Wheel
+    Patterns capture best practices refined over decades.
+
+    Example: Instead of hacking together a way to manage global settings, use the Singleton pattern.
+
+2. Improve Code Readability
+    Patterns provide shared vocabulary (e.g., "We’re using a Factory here").
+
+    Example: Naming a class PaymentAdapter instantly signals its purpose to other developers.
+
+3. Promote Scalability
+    Patterns decouple components, making it easier to extend or modify code later.
+
+    Example: The Strategy pattern lets you swap algorithms (e.g., payment methods) without rewriting core logic.
+
+4. Solve Specific Problems Efficiently
+    | Problem                    | Pattern   | Solution                                   |
+    |----------------------------+-----------+--------------------------------------------|
+    | Complex Object creation    | Factory   | Delegate instantiationto a dedicated class |
+    | Global access to resources | Singleton | Ensure only one Instance exists            |
+    | Incompatible interfaces    | Adapter   | Wrap ine interface to match another        |
+    |----------------------------+-----------+--------------------------------------------|
+
+5. Reduce Bugs
+    Patterns encourage testable, modular designs.
+
+    Example: Observer pattern simplifies event handling without spaghetti code.
+
+
+** Types Of Design Patterns
+*** Creational (Object creation)
+    Singleton, Factory, Builder
+
+*** Structural (Object composition)
+    Adapter, Facade, Decorator
+
+*** Behavioral (Object interaction)
+    Observer, Strategy, Command
+
+
+** Example: Observer Pattern (Behavioral)
+Problem: You need to notify multiple objects when data changes (e.g., stock prices).
+
+Without a Pattern:
+
+#+begin_src java
+// Manual tracking (error-prone)
+List<User> users = new ArrayList<>();
+void updatePrice() {
+  for (User u : users) u.notify();  // Hardcoded dependency
+}
+With Observer Pattern:
+#+end_src
+
+#+begin_src java
+interface Observer {
+  void update();
+}
+
+class Stock {
+  private List<Observer> observers = new ArrayList<>();
+
+  void addObserver(Observer o) {
+    observers.add(o);
+  }
+
+  void priceChanged() {
+    for (Observer o : observers) o.update(); // Decoupled
+  }
+}
+#+end_src
+
+Benefits:
++ Open/closed principle (add new observers without modifying Stock).
++ Reusable across projects.
+
+
+** When Not to Use Patterns
++ Over-engineering: Don’t force a pattern if the problem is simple.
++ Premature optimization: Start with clean code, then refactor if needed.
+
+** Key Takeaways
++ Design patterns = Time-tested solutions.
++ They standardize communication among developers.
++ Use them to write cleaner, more adaptable code.
+#+begin_quote
+"Patterns are tools, not rules." – Adapt to your project’s needs!
+#+end_quote
