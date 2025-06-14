@@ -38,18 +38,17 @@ Think of them as blueprints for solving recurring challenges in software design,
     Example: The Strategy pattern lets you swap algorithms (e.g., payment methods) without rewriting core logic.
 
 4. Solve Specific Problems Efficiently
-    | Problem                    | Pattern   | Solution                                   |
-    |----------------------------+-----------+--------------------------------------------|
-    | Complex Object creation    | Factory   | Delegate instantiationto a dedicated class |
-    | Global access to resources | Singleton | Ensure only one Instance exists            |
-    | Incompatible interfaces    | Adapter   | Wrap ine interface to match another        |
-    |----------------------------+-----------+--------------------------------------------|
+    | Problem                    | Pattern   | Solution                                    |
+    |----------------------------+-----------+---------------------------------------------|
+    | Complex Object creation    | Factory   | Delegate instantiation to a dedicated class |
+    | Global access to resources | Singleton | Ensure only one Instance exists             |
+    | Incompatible interfaces    | Adapter   | Wrap ine interface to match another         |
+    |----------------------------+-----------+---------------------------------------------|
 
 5. Reduce Bugs
     Patterns encourage testable, modular designs.
 
     Example: Observer pattern simplifies event handling without spaghetti code.
-
 
 * Types Of Design Patterns
 *** Creational (Object creation)
@@ -60,7 +59,6 @@ Think of them as blueprints for solving recurring challenges in software design,
 
 *** Behavioral (Object interaction)
     Observer, Strategy, Command
-
 
 * Example: Observer Pattern (Behavioral)
 Problem: You need to notify multiple objects when data changes (e.g., stock prices).
@@ -76,6 +74,7 @@ void updatePrice() {
 With Observer Pattern:
 #+end_src
 
+With a Pattern:
 #+begin_src java
 interface Observer {
   void update();
@@ -97,7 +96,6 @@ class Stock {
 Benefits:
 + Open/closed principle (add new observers without modifying Stock).
 + Reusable across projects.
-
 
 * When Not to Use Patterns
 + Over-engineering: Don’t force a pattern if the problem is simple.
