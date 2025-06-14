@@ -1,4 +1,3 @@
-#+title:     Design Patters
 #+author:    Mohamed Tarek
 #+email:     m96tarek@gmail.com
 
