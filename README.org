@@ -3,14 +3,14 @@
 #+email:     m96tarek@gmail.com
 
 * Design Patterns :TOC:
-- [[#design-patterns][Design Patterns]]
+- [[#what-are-design-patterns][What are Design Patterns]]
   - [[#why-are-they-useful][Why Are They Useful?]]
   - [[#types-of-design-patterns][Types Of Design Patterns]]
   - [[#example-observer-pattern-behavioral][Example: Observer Pattern (Behavioral)]]
   - [[#when-not-to-use-patterns][When Not to Use Patterns]]
   - [[#key-takeaways][Key Takeaways]]
 
-* Design Patterns
+* What are Design Patterns
 What are Design Patterns:
 Design patterns are reusable, proven solutions to common software design problems. They provide templates for structuring code to make it:
 
